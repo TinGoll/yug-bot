@@ -1,0 +1,30 @@
+
+body {
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+}
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table thead tr {
+    background-color: beige;
+}
+
+.table thead tr td {
+    border: 2px solid;
+    padding: 10px 20px;
+
+}
+
+
+
+@media print {
+    body{
+        width:  21cm;
+        height: 29.7cm;
+        /* change the margins as you want them to be. */
+   } 
+}
