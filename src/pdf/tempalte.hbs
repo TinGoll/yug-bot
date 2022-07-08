@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <p class="min_line_height jirniy font_title">Акт № {{id}}</p>
+        <p>о нарушении трудовой дисциплины</p>
+      </div>
+      <div class="photo_frame">
+        <div class="photo">
+            {{#photos}}<div class="cards__image"><img src="../files/photo/{{fileName}}" alt="img1"></div> {{/photos}}
+        </div>
+      </div>
+      <div class="document_body">
+        <b>{{date_violation}} г. в {{time_violation}}</b> за сотрудником <b>{{worker}}</b> было зафиксировано нарушение трудовой дисциплины, 
+        а именно: <b>{{reson}}</b>. В связи с этим оформлено удержание в размере <b>{{amount}}</b> рублей. 
+      </div>
+    </div>
+  </body>
+  <style>
+    body,
+    html {
+      padding: 0;
+      margin: 0;
+    }
+    body {
+      max-width: 100%;
+      padding: 10mm;
+      font-size: 20px;
+    }
+
+    .min_line_height {
+      line-height: 0.9em;
+    }
+    .mid_line_height {
+      line-height: 1em;
+    }
+
+    .container {
+      width: 100%;
+      height: 100%;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .photo_frame {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 10mm;
+    }
+
+    .photo {
+        height: 100%;
+        width: 100%;
+        display: -webkit-box; /* wkhtmltopdf uses this one */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        webkit-box-pack: center; /* wkhtmltopdf uses this one */
+        justify-content: space-around;
+    }
+    .cards__image {
+        width: 48%;
+        max-height: 70mm;
+        border-radius: 20px;
+        overflow: hidden;
+        margin: 1mm;
+    }
+
+    .cards__image:first-child {
+        width: 100%;
+        max-height: 142mm;
+    }
+  
+    .cards__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .document_body {
+     text-align:justify;
+    }
+
+    .jirniy {
+        font-weight: 700;
+    }
+
+    .font_title {
+        font-size: 24px;
+    }
+
+  </style>
+
+  <script>
+  
+  </script>
+</html>
